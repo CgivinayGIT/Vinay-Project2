@@ -9,15 +9,20 @@ Library     OperatingSystem     # To handle file operations, like taking screens
 
 *** Test Cases ***
 TC1
-  Print All Arguments  apple    banana  cherry
-
+  Print All Arguments1  apple    banana  cherry
+  Print All Arguments2  CAT    DOG    HEN
 
 *** Keywords ***
-Print All Arguments
+Print All Arguments1
     [Arguments]    @{values}
-    FOR     ${item}     IN      @{values}
-        ${uppercase_item}=  Convert To Upper Case    ${item}
-        Log    ${uppercase_item}
+    FOR     ${item1}     IN      @{values}
+        ${uppercase_item1}=  Convert To Upper Case    ${item1}
+        Log    ${uppercase_item1}
     END
 
-
+Print All Arguments2
+    [Arguments]    @{values}
+    FOR     ${item2}     IN      @{values}
+        ${uppercase_item2}=  Convert To Lower Case    ${item2}
+        Log    ${uppercase_item2}
+    END
