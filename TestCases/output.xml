@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2025-03-21T07:38:54.147330" rpa="false" schemaversion="5">
+<suite id="s1" name="Invalidcredentials" source="C:\Users\vinay.singapuram\PycharmProjects\Vinay Project2\TestCases\Invalidcredentials.robot">
+<test id="s1-t1" name="Login With Multiple Invalid Credentials" line="13">
+<kw name="Login Should Fail With Invalid Credentials">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-21T07:38:54.318342" level="INFO">Opening browser 'Chrome' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-21T07:38:54.318342" elapsed="5.421687"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-21T07:38:59.740029" elapsed="0.026338"/>
+</kw>
+<kw name="Input Username">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-21T07:38:59.767374" level="INFO">Typing text 'invalid_user' into text field 'xpath=//input[@id='username']'.</msg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T07:38:59.767374" elapsed="0.072531"/>
+</kw>
+<arg>'${username}' != 'empty'</arg>
+<arg>Input Text</arg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-03-21T07:38:59.767374" elapsed="0.072531"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2025-03-21T07:38:59.766367" elapsed="0.073538"/>
+</kw>
+<kw name="Input Password">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-21T07:38:59.840907" level="INFO">Typing text 'wrong_password' into text field 'xpath=//input[@id='password']'.</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T07:38:59.840907" elapsed="0.051020"/>
+</kw>
+<arg>'${password}' != 'empty'</arg>
+<arg>Input Text</arg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-03-21T07:38:59.840907" elapsed="0.051020"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2025-03-21T07:38:59.839905" elapsed="0.052022"/>
+</kw>
+<kw name="Submit Credentials">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-21T07:38:59.891927" level="INFO">Clicking element 'xpath=//button[@id='submit']'.</msg>
+<arg>${SUBMIT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T07:38:59.891927" elapsed="0.051049"/>
+</kw>
+<status status="PASS" start="2025-03-21T07:38:59.891927" elapsed="0.051049"/>
+</kw>
+<kw name="Login Should Have Failed">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ERROR_MESSAGE}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-21T07:38:59.943961" elapsed="0.244621"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-03-21T07:39:00.287371" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-21T07:39:00.287371" level="FAIL">Element 'xpath=//div[@id='error']' should have contained text 'Your password is invalid!' but its text was 'Your username is invalid!'.</msg>
+<arg>${ERROR_MESSAGE}</arg>
+<arg>Your password is invalid!</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="FAIL" start="2025-03-21T07:39:00.189583" elapsed="0.098787">Element 'xpath=//div[@id='error']' should have contained text 'Your password is invalid!' but its text was 'Your username is invalid!'.</status>
+</kw>
+<status status="FAIL" start="2025-03-21T07:38:59.943961" elapsed="0.344409">Element 'xpath=//div[@id='error']' should have contained text 'Your password is invalid!' but its text was 'Your username is invalid!'.</status>
+</kw>
+<arg>invalid_user</arg>
+<arg>wrong_password</arg>
+<status status="FAIL" start="2025-03-21T07:38:54.317359" elapsed="5.972026">Element 'xpath=//div[@id='error']' should have contained text 'Your password is invalid!' but its text was 'Your username is invalid!'.</status>
+</kw>
+<kw name="Login Should Fail With Invalid Credentials">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-21T07:39:00.289616" level="INFO">Opening browser 'Chrome' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-21T07:39:00.289616" elapsed="4.144584"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-21T07:39:04.434200" elapsed="0.028999"/>
+</kw>
+<kw name="Input Username">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-21T07:39:04.464198" level="INFO">Typing text 'test_user' into text field 'xpath=//input[@id='username']'.</msg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T07:39:04.464198" elapsed="0.065109"/>
+</kw>
+<arg>'${username}' != 'empty'</arg>
+<arg>Input Text</arg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-03-21T07:39:04.463199" elapsed="0.066108"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2025-03-21T07:39:04.463199" elapsed="0.066108"/>
+</kw>
+<kw name="Input Password">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-21T07:39:04.530307" level="INFO">Typing text '123456' into text field 'xpath=//input[@id='password']'.</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T07:39:04.529307" elapsed="0.049006"/>
+</kw>
+<arg>'${password}' != 'empty'</arg>
+<arg>Input Text</arg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-03-21T07:39:04.529307" elapsed="0.050007"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2025-03-21T07:39:04.529307" elapsed="0.050007"/>
+</kw>
+<kw name="Submit Credentials">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-21T07:39:04.579314" level="INFO">Clicking element 'xpath=//button[@id='submit']'.</msg>
+<arg>${SUBMIT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T07:39:04.579314" elapsed="0.041034"/>
+</kw>
+<status status="PASS" start="2025-03-21T07:39:04.579314" elapsed="0.041034"/>
+</kw>
+<kw name="Login Should Have Failed">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ERROR_MESSAGE}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-21T07:39:04.620348" elapsed="0.232337"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-03-21T07:39:04.976142" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-21T07:39:04.977146" level="FAIL">Element 'xpath=//div[@id='error']' should have contained text 'Your password is invalid!' but its text was 'Your username is invalid!'.</msg>
+<arg>${ERROR_MESSAGE}</arg>
+<arg>Your password is invalid!</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="FAIL" start="2025-03-21T07:39:04.852685" elapsed="0.124461">Element 'xpath=//div[@id='error']' should have contained text 'Your password is invalid!' but its text was 'Your username is invalid!'.</status>
+</kw>
+<status status="FAIL" start="2025-03-21T07:39:04.620348" elapsed="0.356798">Element 'xpath=//div[@id='error']' should have contained text 'Your password is invalid!' but its text was 'Your username is invalid!'.</status>
+</kw>
+<arg>test_user</arg>
+<arg>123456</arg>
+<status status="FAIL" start="2025-03-21T07:39:00.289616" elapsed="4.688526">Element 'xpath=//div[@id='error']' should have contained text 'Your password is invalid!' but its text was 'Your username is invalid!'.</status>
+</kw>
+<kw name="Login Should Fail With Invalid Credentials">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-21T07:39:04.978142" level="INFO">Opening browser 'Chrome' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-21T07:39:04.978142" elapsed="4.177014"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-21T07:39:09.155156" elapsed="0.033998"/>
+</kw>
+<kw name="Input Username">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-21T07:39:09.190155" level="INFO">Typing text 'admin' into text field 'xpath=//input[@id='username']'.</msg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T07:39:09.189154" elapsed="0.062055"/>
+</kw>
+<arg>'${username}' != 'empty'</arg>
+<arg>Input Text</arg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-03-21T07:39:09.189154" elapsed="0.062055"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2025-03-21T07:39:09.189154" elapsed="0.062055"/>
+</kw>
+<kw name="Input Password">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-21T07:39:09.251209" level="INFO">Typing text 'pass123' into text field 'xpath=//input[@id='password']'.</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T07:39:09.251209" elapsed="0.050957"/>
+</kw>
+<arg>'${password}' != 'empty'</arg>
+<arg>Input Text</arg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-03-21T07:39:09.251209" elapsed="0.050957"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2025-03-21T07:39:09.251209" elapsed="0.050957"/>
+</kw>
+<kw name="Submit Credentials">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-21T07:39:09.303277" level="INFO">Clicking element 'xpath=//button[@id='submit']'.</msg>
+<arg>${SUBMIT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T07:39:09.303277" elapsed="0.043942"/>
+</kw>
+<status status="PASS" start="2025-03-21T07:39:09.303277" elapsed="0.043942"/>
+</kw>
+<kw name="Login Should Have Failed">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ERROR_MESSAGE}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-21T07:39:09.348171" elapsed="0.240176"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-03-21T07:39:09.689826" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-21T07:39:09.689826" level="FAIL">Element 'xpath=//div[@id='error']' should have contained text 'Your password is invalid!' but its text was 'Your username is invalid!'.</msg>
+<arg>${ERROR_MESSAGE}</arg>
+<arg>Your password is invalid!</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="FAIL" start="2025-03-21T07:39:09.589348" elapsed="0.101451">Element 'xpath=//div[@id='error']' should have contained text 'Your password is invalid!' but its text was 'Your username is invalid!'.</status>
+</kw>
+<status status="FAIL" start="2025-03-21T07:39:09.347219" elapsed="0.343580">Element 'xpath=//div[@id='error']' should have contained text 'Your password is invalid!' but its text was 'Your username is invalid!'.</status>
+</kw>
+<arg>admin</arg>
+<arg>pass123</arg>
+<status status="FAIL" start="2025-03-21T07:39:04.978142" elapsed="4.712657">Element 'xpath=//div[@id='error']' should have contained text 'Your password is invalid!' but its text was 'Your username is invalid!'.</status>
+</kw>
+<kw name="Login Should Fail With Invalid Credentials">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-21T07:39:09.691901" level="INFO">Opening browser 'Chrome' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-21T07:39:09.691901" elapsed="4.323124"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-21T07:39:14.015025" elapsed="0.025004"/>
+</kw>
+<kw name="Input Username">
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${username}' != 'empty'</arg>
+<arg>Input Text</arg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-03-21T07:39:14.040029" elapsed="0.000000"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2025-03-21T07:39:14.040029" elapsed="0.000000"/>
+</kw>
+<kw name="Input Password">
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${password}' != 'empty'</arg>
+<arg>Input Text</arg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-03-21T07:39:14.040029" elapsed="0.000999"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2025-03-21T07:39:14.040029" elapsed="0.000999"/>
+</kw>
+<kw name="Submit Credentials">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-21T07:39:14.041028" level="INFO">Clicking element 'xpath=//button[@id='submit']'.</msg>
+<arg>${SUBMIT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T07:39:14.041028" elapsed="0.060006"/>
+</kw>
+<status status="PASS" start="2025-03-21T07:39:14.041028" elapsed="0.060006"/>
+</kw>
+<kw name="Login Should Have Failed">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ERROR_MESSAGE}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-21T07:39:14.101034" elapsed="0.231144"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-03-21T07:39:14.421677" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-21T07:39:14.421677" level="FAIL">Element 'xpath=//div[@id='error']' should have contained text 'Your password is invalid!' but its text was 'Your username is invalid!'.</msg>
+<arg>${ERROR_MESSAGE}</arg>
+<arg>Your password is invalid!</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="FAIL" start="2025-03-21T07:39:14.333179" elapsed="0.088498">Element 'xpath=//div[@id='error']' should have contained text 'Your password is invalid!' but its text was 'Your username is invalid!'.</status>
+</kw>
+<status status="FAIL" start="2025-03-21T07:39:14.101034" elapsed="0.321633">Element 'xpath=//div[@id='error']' should have contained text 'Your password is invalid!' but its text was 'Your username is invalid!'.</status>
+</kw>
+<arg>empty</arg>
+<arg>empty</arg>
+<status status="FAIL" start="2025-03-21T07:39:09.690799" elapsed="4.731868">Element 'xpath=//div[@id='error']' should have contained text 'Your password is invalid!' but its text was 'Your username is invalid!'.</status>
+</kw>
+<status status="FAIL" start="2025-03-21T07:38:54.317359" elapsed="20.105308">Several failures occurred:
+
+1) Element 'xpath=//div[@id='error']' should have contained text 'Your password is invalid!' but its text was 'Your username is invalid!'.
+
+2) Element 'xpath=//div[@id='error']' should have contained text 'Your password is invalid!' but its text was 'Your username is invalid!'.
+
+3) Element 'xpath=//div[@id='error']' should have contained text 'Your password is invalid!' but its text was 'Your username is invalid!'.
+
+4) Element 'xpath=//div[@id='error']' should have contained text 'Your password is invalid!' but its text was 'Your username is invalid!'.</status>
+</test>
+<status status="FAIL" start="2025-03-21T07:38:54.149336" elapsed="20.274339"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Invalidcredentials">Invalidcredentials</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
